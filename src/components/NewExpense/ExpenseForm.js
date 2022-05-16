@@ -1,39 +1,47 @@
 import "./ExpenseForm.css";
 import React,{useState} from "react";
 const ExpenseForm = () => {
-    // const [enteredTitle,setEnteredTitle]=useState('')
-    // const [enteredAmount,setEnteredAmount]=useState('')
-    // const [enteredDate,setEnteredDate]=useState('')
+    const [enteredTitle,setEnteredTitle]=useState('')
+    const [enteredAmount,setEnteredAmount]=useState('')
+    const [enteredDate,setEnteredDate]=useState('')
      
-    const [userInput,setUserInput]=useState({
-        enteredTitle:"",
-        enteredAmount:"",
-        enteredDate:""
-    })
+    // const [userInput,setUserInput]=useState({
+    //     enteredTitle:"",
+    //     enteredAmount:"",
+    //     enteredDate:""
+    // })
     const titleChangeHandler=(event)=>{
-        // console.log(enteredTitle)
-        // setEnteredTitle(event.target.value)
-        setUserInput({
-            ...userInput,
-            enteredTitle:event.target.value
-        })
-        console.log(userInput)
+        console.log(enteredTitle)
+        setEnteredTitle(event.target.value)
+        // setUserInput({
+        //     ...userInput,
+        //     enteredTitle:event.target.value
+        // })
+        // console.log(userInput)
+        
+        //When we have to work with prevStat
+        // setUserInput((prevStat)=>{
+        //     return {...prevStat,
+        //     enteredTitle:event.target.value}
+        // })
     }
     const amountChangeHandler=(event)=>{
-        // console.log(enteredAmount)
-        setUserInput({
-            ...userInput,
-            enteredAmount:event.target.value
-        })
-        console.log(userInput)
+        console.log(enteredAmount)
+        setEnteredAmount(event.target.value)
+        // setUserInput({
+        //     ...userInput,
+        //     enteredAmount:event.target.value
+        // })
+        // console.log(userInput)
     }
     const dateChangeHandler=(event)=>{
-        // console.log(enteredDate)
-        setUserInput({
-            ...userInput,
-            enteredDate:event.target.value
-        })
-        console.log(userInput)
+        console.log(enteredDate)
+        setEnteredDate(event.target.value)
+        // setUserInput({
+        //     ...userInput,
+        //     enteredDate:event.target.value
+        // })
+        // console.log(userInput)
     }
   return (
     <form>
