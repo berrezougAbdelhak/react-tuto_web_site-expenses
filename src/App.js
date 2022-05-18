@@ -29,7 +29,9 @@ function App() {
     // expenses.push(enteredExpenseData)
     // console.log("in app.js ")
     // console.log(expenses)
-    setExpenses([enteredExpenseData,...expenses])
+    setExpenses((prevExpenses)=>{
+      return([enteredExpenseData,...prevExpenses])
+    })
   }
   return (
     <div>
